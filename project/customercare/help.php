@@ -1,3 +1,12 @@
+
+<?php 
+
+
+if (isset($_SESSION['buyer_id'])) {
+    $bid = $_SESSION['buyer_id'];
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

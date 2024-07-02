@@ -113,3 +113,7 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+.remember-forget a{
+    color: white;
+    margin-left: 60px;
+}

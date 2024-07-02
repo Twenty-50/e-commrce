@@ -1,3 +1,14 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['buyer_id'])){
+    header('location: ../seeMore/seemore.php');
+    exit();
+}
+
+$bid = isset($_SESSION['buyer_id']) ? $_SESSION['buyer_id'] : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,25 +23,22 @@
         <form action="verify.php" method="post">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="tel" name="phone"  placeholder="phone" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
                 <i class='bx bx-user-circle'></i>
             </div>
             <div class="input-box">
-                <input type="password" name="password" placeholder="password" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <i class='bx bxs-lock'></i>
             </div>
-            <div class="remeber-forget">
-                <label> <input type="checkbox"> Remember me </label>
-                <a href="#">Forget password?</a>
+            <div class="remember-forget">
+                <label> <input type="checkbox" name="remember"> Remember me </label>
+                <label>   <a href="../customercare/help.php">Forgot password?</a> </label>
+                
             </div>
-            <button type="submit" class="btn" onclick="myfunction2()">Login</button>
-            <script>
-                function myfunction2(){
-                window.location.href="../seemore/seemore.php";}
-            </script>
+            <button type="submit" class="btn">Login</button>
 
             <div class="register-link">
-                <p>Don't have an any account? <a href="../regPage/register.php">Register</a></p>
+                <p>Don't have an account? <a href="../regPage/register.php">Register</a></p>
             </div>
         </form>
     </div>

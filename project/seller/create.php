@@ -33,14 +33,14 @@
             </div>
 
             <div class="last">
-                <button class="btn" onclick="myfunction1()">Register</button>
-        <script> 
+                <button class="btn" onclick="showalert()">Register</button>
+        <!-- <script> 
         function myfunction1(){
             window.alert('registration success');
             window.location.href="../sellerlogin/slogin.php";
             
         }
-        </script>
+        </script> -->
             </div>
         </div>
     </form>

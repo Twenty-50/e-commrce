@@ -1,3 +1,14 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['seller_id'])){
+    header('location: ../dashboard/dash.php');
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

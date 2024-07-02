@@ -1,3 +1,14 @@
+<?php 
+session_start();
+
+include'../main/connection.php';
+
+if(isset($_session['seller_id'])){
+    $sid=$_session['seller_id'];
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +22,7 @@
 
 <body>
     <header>
-    <?php include('../landingPage/header.php');?> 
+    <?php include('../landingPage/sheader.php');?> 
     <header >
     <form action="" method="post">
         <div class="cont1">

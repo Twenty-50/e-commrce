@@ -2,7 +2,7 @@
 if (isset($_POST['logout'])) {
 
     session_destroy();
-    header("Location: ../login/loginn1.php");
+    header("Location: ../sellerlogin/slogin.php");
 }?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,10 +67,7 @@ if (isset($_POST['logout'])) {
                 <p class="nav-second"> & Order</p>
             </div>
 
-            <div class="nav-cart border">
 
-                <i class="fa-solid fa-cart-shopping"></i><a href="../addtocart/cart.php">Cart </a>
-            </div>
         </div>
 
         <div class="panel">
@@ -81,7 +78,7 @@ if (isset($_POST['logout'])) {
                 <p>Today's Deals</p>
 
                 <p><a href="../customercare/help.php">Customer Service</a></p>
-                <p><a href="../regPage/register.php">Register</a></p>
+              
 
                 <p>Gift Card</p>
 
@@ -107,14 +104,14 @@ if (isset($_POST['logout'])) {
         </script>
         <div id="sign" style="display: none;">
             <h2 class="hw">Welcome to dokan<h2>
-                    <?php if (!isset($_SESSION['buyer_id'])) {
-                        echo '<a href="../login/loginn1.php"><button class="sup">Sign in</button></a> 
+                    <?php if (!isset($_SESSION['seller_id'])) {
+                        echo '<a href="../sellerlogin/slogin.php"><button class="sup">Sign in</button></a> 
                     <br>
 
-                    <a href="../regPage/register.php"><button class="sup"> Create Account</button></a>
+                    <a href="../seller/sreg.php"><button class="sup"> Create Account</button></a>
 ';
                     } else {
-                        echo "<form action='' method='post'><button id='btn' name='logout'>logout</button></form>";
+                        echo "<form action='' method='post'><button id='btnO' name='logout'>logout</button></form>";
                     }
                     ?>
 
